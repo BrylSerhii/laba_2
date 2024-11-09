@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tariffs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="xsd/tariff.xsd">
+    <Tariff>
+        <Name>SuperTariff</Name>
+        <OperatorName>Мобільний Оператор A</OperatorName>
+        <Payroll currency="UAH">250.00</Payroll>
+        <CallPrices>
+            <InsideNetwork currency="UAH">1.50</InsideNetwork>
+            <OutsideNetwork currency="UAH">2.00</OutsideNetwork>
+            <Landline currency="UAH">3.00</Landline>
+        </CallPrices>
+        <SMSPrice currency="UAH">0.75</SMSPrice>
+        <Parameters>
+            <FavoriteNumber>3</FavoriteNumber>
+            <Tariffing>12-second</Tariffing>
+            <ConnectionFee currency="UAH">50.00</ConnectionFee>
+        </Parameters>
+    </Tariff>
+
+    <Tariff>
+        <Name>EcoTariff</Name>
+        <OperatorName>Мобільний Оператор B</OperatorName>
+        <Payroll currency="UAH">150.00</Payroll>
+        <CallPrices>
+            <InsideNetwork currency="UAH">1.00</InsideNetwork>
+            <OutsideNetwork currency="UAH">1.80</OutsideNetwork>
+            <Landline currency="UAH">2.50</Landline>
+        </CallPrices>
+        <SMSPrice currency="UAH">0.60</SMSPrice>
+        <Parameters>
+            <FavoriteNumber>5</FavoriteNumber>
+            <Tariffing>per-minute</Tariffing>
+            <ConnectionFee currency="UAH">30.00</ConnectionFee>
+        </Parameters>
+    </Tariff>
+
+    <Tariff>
+        <Name>BusinessTariff</Name>
+        <OperatorName>Мобільний Оператор C</OperatorName>
+        <Payroll currency="UAH">500.00</Payroll>
+        <CallPrices>
+            <InsideNetwork currency="UAH">1.20</InsideNetwork>
+            <OutsideNetwork currency="UAH">2.50</OutsideNetwork>
+            <Landline currency="UAH">3.20</Landline>
+        </CallPrices>
+        <SMSPrice currency="UAH">0.80</SMSPrice>
+        <Parameters>
+            <FavoriteNumber>2</FavoriteNumber>
+            <Tariffing>12-second</Tariffing>
+            <ConnectionFee currency="UAH">100.00</ConnectionFee>
+        </Parameters>
+    </Tariff>
+</Tariffs>
