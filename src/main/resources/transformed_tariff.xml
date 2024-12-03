@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><GroupedTariffs>
+    <Group>
+        <OperatorName>Мобільний Оператор A</OperatorName>
+        <TariffsByOperator/>
+    </Group>
+    <Group>
+        <OperatorName>Мобільний Оператор B</OperatorName>
+        <TariffsByOperator/>
+    </Group>
+    <Group>
+        <OperatorName>Мобільний Оператор C</OperatorName>
+        <TariffsByOperator/>
+    </Group>
+</GroupedTariffs>
