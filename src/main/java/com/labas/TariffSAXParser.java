@@ -34,7 +34,6 @@ public class TariffSAXParser extends DefaultHandler {
             logger.info("SAX parsing of tariffs completed successfully.");
         } catch (Exception e) {
             logger.error("SAX parsing error: {}", e.getMessage());
-            e.printStackTrace();
         }
         TariffTypeComparator tariffTypeComparator = new TariffTypeComparator();
         tariffs.sort(tariffTypeComparator);

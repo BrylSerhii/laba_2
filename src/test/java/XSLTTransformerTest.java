@@ -2,8 +2,6 @@
 import com.labas.XSLTTransformer;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
-import org.mockito.Mockito;
-import org.slf4j.Logger;
 
 import java.io.File;
 import java.nio.file.Files;
@@ -11,11 +9,10 @@ import java.nio.file.Files;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class XSLTTransformerTest {
-    private Logger mockLogger = Mockito.mock(Logger.class);
 
-    private static final String XML_FILE_PATH = "src/main/resources/tariff.xml";
+    private static final String XML_FILE_PATH = "src/test/resources/test_traffic.xml";
     private static final String XSLT_FILE_PATH = "src/main/resources/tariff_transform.xslt";
-    private static final String OUTPUT_FILE_PATH = "src/main/resources/transformed_tariff.xml";
+    private static final String OUTPUT_FILE_PATH = "src/test/resources/test_traffic_xslt.xml";
 
 
 
@@ -30,8 +27,8 @@ public class XSLTTransformerTest {
 
     @Test
     public void testXSLTTransformation() {
+       XSLTTransformer.extracted(XML_FILE_PATH,XSLT_FILE_PATH,OUTPUT_FILE_PATH);
         // Execute the transformation
-        com.labas.XSLTTransformer.main(new String[]{});
 
         // Verify the output file is created
         File outputFile = new File(OUTPUT_FILE_PATH);
@@ -41,8 +38,8 @@ public class XSLTTransformerTest {
     @Test
     public void testOutputFileContent() throws Exception {
         // Execute the transformation
-        XSLTTransformer.main(new String[]{});
 
+        XSLTTransformer.extracted(XML_FILE_PATH,XSLT_FILE_PATH,OUTPUT_FILE_PATH);
         // Verify the output file is created
         File outputFile = new File(OUTPUT_FILE_PATH);
         assertTrue(outputFile.exists(), "Output file should be created after transformation");

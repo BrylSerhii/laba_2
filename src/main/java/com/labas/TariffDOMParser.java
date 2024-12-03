@@ -98,7 +98,7 @@ public class TariffDOMParser {
             logger.info("DOM parsing of tariffs completed successfully.");
         } catch (Exception e) {
             logger.error("DOM parsing error: {}", e.getMessage());
-            e.printStackTrace();
+
         }
         return tariffs;
     }

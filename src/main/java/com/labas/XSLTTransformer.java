@@ -6,12 +6,14 @@ import javax.xml.transform.stream.StreamSource;
 import java.io.File;
 
 public class XSLTTransformer {
-    public static void main(String[] args) {
+
+
+    public static void extracted( String xmlFilePath,String xsltFilePath,String outputFilePath) {
         try {
             // Load the XML input file
-            File xmlFile = new File("src/main/resources/tariff.xml");
-            File xsltFile = new File("src/main/resources/tariff_transform.xslt"); // Use .xsl for XSLT file
-            File outputFile = new File("src/main/resources/transformed_tariff.xml"); // Specify output file name
+            File xmlFile = new File(xmlFilePath);
+            File xsltFile = new File(xsltFilePath); // Use .xsl for XSLT file
+            File outputFile = new File(outputFilePath); // Specify output file name
 
             // Set up the transformer
             TransformerFactory factory = TransformerFactory.newInstance();
@@ -24,9 +26,7 @@ public class XSLTTransformer {
             Result output = new StreamResult(outputFile);
             transformer.transform(xmlSource, output);
 
-            System.out.println("Transformation completed successfully!");
         } catch (TransformerException e) {
-            e.printStackTrace();
         }
     }
 }

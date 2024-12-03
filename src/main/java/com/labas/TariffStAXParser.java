@@ -99,7 +99,6 @@ public class TariffStAXParser {
             logger.info("StAX parsing of tariffs completed successfully.");
         } catch (Exception e) {
             logger.error("StAX parsing failed: {}", e.getMessage());
-            e.printStackTrace();
         }
         TariffTypeComparator tariffTypeComparator = new TariffTypeComparator();
         tariffs.sort(tariffTypeComparator);
